@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
             #map {
                 height: 90%;
@@ -35,8 +37,42 @@
         $latitude = $row['latitude'];
               
     ?>
+        <!-- nav begin  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container ">
+    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+      <div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active lol" aria-current="page" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="showAll.php">Show all</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link active" href="#">Contact</a>
+        </li>
+        </div>
+        <div>
+        <li>
+          <a href="#" class="fa fa-facebook ms-5"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+          <a href="#" class="fa fa-snapchat-ghost"></a>
+        </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- nav end  -->
 
 <!-- card begin  -->
+
 <div class="d-flex justify-content-center mt-5">
 <div class="card text-center d-flex" style="width: 18rem;">
 <img src="pictures/<?= $row["picture"] ?>"  class="card-img-top" alt="...">
@@ -52,7 +88,7 @@
 
 <!-- maps begin  -->
 
-<div id="map"></div>
+<div class="" id="map"></div>
         <script>
             var map;
             function initMap() {

@@ -1,0 +1,21 @@
+* {
+    font-family: serif;
+}
+
+.fa {
+    padding: 12px;
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-item {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#map {
+    margin-top: 60px;
+}
