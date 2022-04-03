@@ -10,21 +10,25 @@
 </head>
 <body>
 <div class="container">
-       <h2>AJAX - API request</h2>
-       <button type="button" id="btn" class="btn btn-primary">Load content</button>
-       <hr>
-       <div id="content" class="row" href="displayAll.php"></div>
-   </div>
-
-   <script>
-       document.getElementById('btn').addEventListener('click', loadApiContent);
-       let content = document.getElementById('content');
-       function loadApiContent() {
-           let ajReq = new XMLHttpRequest();
-           ajReq.open("GET", displayAll.php);
-           ajReq.send();
-       }
-   </script>
+        <h2>AJAX - API</h2>
+        <!-- refering the function on the onclick button and creating the function down below -->
+        <button type="button" class="btn-primary" onclick="loadApiContent()">Load content</button>
+        <!-- content is gonna get printed here -->
+        <div id="content"></div>
+    <script>
+        // creating the function
+        function loadApiContent() {
+            
+            let contentApi = new XMLHttpRequest();
+            contentApi.onload = function(){
+                    document.getElementById("content").innerHTML = this.responseText;
+                
+            };
+            contentApi.open("GET", "displayAll.php");
+            contentApi.send();
+        }
+    </script>
+</div>
     
 </body>
 </html>
